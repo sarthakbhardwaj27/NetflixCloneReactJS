@@ -2,8 +2,6 @@
 
 MovieLand is a simple web application that allows users to search for movies and view movie details. It uses the OMDB API to fetch movie data and display it in a user-friendly way.
 
-![Screenshot](screenshot.png)
-
 ## Features
 
 - Search for movies by title.
