@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+
+
+const api_key = '97ca7bc6';
+const API_URL = 'http://www.omdbapi.com?apikey=97ca7bc6';
 
 function App() {
+
+  const searchMovies = async (title) => {
+    const response = await fetch(`${API_URL}&s=${title}`)
+    const data = await response.json();
+
+    console.log(data.Search);
+  }
+
+  useEffect(()=>{
+    searchMovies('spiderman')
+  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <h1>App</h1>
   );
 }
 
